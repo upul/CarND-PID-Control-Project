@@ -34,7 +34,19 @@ int main() {
 
     PID pid_steering_angle;
     // TODO: Initialize the pid_steering_angle variable.
-    pid_steering_angle.Init(0.1, 0.002, 5.0);
+
+    /**
+     * Hyper parameters Kp, Ki, Kd were selected using grid search approach.
+     * Set: Kp: 0.1, 0.2, 0.3
+     * Set: Ki: 0.001, 0.002, 0.003
+     * Set: Kd: 2.0, 4.0, 8.0
+     *
+     * For all possible combination of (Kp, Ki, Kd) and I ran simulator and
+     * inspected both CTE and quality of navigating the car on the track.
+     *
+     * Finally, picked following values
+     */
+    pid_steering_angle.Init(0.1, 0.002, 4.0);
 
     h.onMessage([&pid_steering_angle](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {
         // "42" at the start of the message means there's a websocket message event.
