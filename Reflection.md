@@ -26,3 +26,8 @@ With the above intuition, I used following values for Kp, Ki and Kd.
 | 0.1 |  0.001 | 2.0 |
 | 0.2 |    0.002   |  4.0 |
 | 0.3 | 0.003 |    8.0 |
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
