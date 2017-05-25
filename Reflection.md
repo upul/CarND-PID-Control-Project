@@ -34,6 +34,8 @@ Kp| Ki| Kd
 ---|---|---
  0.1|0.002|4.0
 
+The following video shows how the car is navigating on the track using selected hyper-parameters.
+
 <p align="center">
     <a href="https://www.youtube.com/watch?v=WrJ1URxloY0">
         <img src="https://img.youtube.com/vi/WrJ1URxloY0/0.jpg" alt="video output">
