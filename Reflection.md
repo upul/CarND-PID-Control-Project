@@ -6,11 +6,11 @@ In order to mitigate these issues, we can introduce D component to our controlle
 
 Finally, the I component is proportional to both magnitude and duration of the CTE. Hence, I component helps to move the car towards the target trajectory and helps to reduce the drift. 
 
-## Hyper-Parameter Optimization
+### Hyper-Parameter Optimization
 
 Before running the PID controller algorithm, we have to select correct values of the Kp, Ki and Kd parameters. Hence, these three parameters are known as hyper-parameters of the algorithm. 
 
-### The Intuition Behind the Selecting Initial Value for Kp, Ki and Kd.
+#### The Intuition Behind the Selecting Initial Value for Kp, Ki and Kd.
 
 Since I component of the PID controller considers sum of all error from the starting point of the car we normally use very small very for the Ki.
 
@@ -18,4 +18,11 @@ On the other hand for Kp we can use a little bit higher value. However, if the c
 
 Finally, we use a number that is larger than one for the Kd. If  Kd is greater than one, it is possible to observe some rapid oscillation in CTE and that helps the car to take turns. 
 
-### Hyper-Parameter Optimization using Grid Search
+#### Hyper-Parameter Optimization using Grid Search
+
+With the above intuition, I used following values for Kp, Ki and Kd.
+| Kp|      Ki|  Kd|
+|----------|:-------------:|------:|
+| 0.1 |  0.001 | 2.0 |
+| 0.2 |    0.002   |  4.0 |
+| 0.3 | 0.003 |    8.0 |
