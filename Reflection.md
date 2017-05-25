@@ -23,12 +23,13 @@ Finally, we use a number that is larger than one for the Kd. If  Kd is greater t
 With the above intuition, I used following values for Kp, Ki and Kd.
 
  Kp|      Ki|  Kd
----|---|---|
- 0.1 |  0.001 | 2.0 |
+---|---|---
+ 0.1 |  0.001 | 2.0 
  0.2 |    0.002   |  4.0 
  0.3 | 0.003 |    8.0 
+ 
+For each combination of Kp, Ki and Kd I ran the simulator and observed the driving behavior of the car and finally selected following values
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+Kp| Ki| Kd
+---|---|---
+ 0.1|0.002|4.0
